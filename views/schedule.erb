@@ -2,16 +2,18 @@
 <html>
 <head>
   <title>Event Manager 2.0</title>
+  <link rel='stylesheet' href='/dist/css/bootstrap.css'>
 </head>
 <body>
   <h1>Event schedule</h1>
 
   <table>
+  	<% @schedule.each do |item| %>
     <tr>
-      <td>8pm</td>
-      <td>Doors open</td>
+      <td><%= item[0] %></td>
+      <td><%= item[1] %></td>
     </tr>
-    <!-- etc. etc. -->
+    <% end %>
   </table>
 
 </body>
